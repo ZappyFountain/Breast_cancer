@@ -16,9 +16,10 @@ def breast_cancer_prediction(thickness, size, shape, adhesion, single, nuclei, c
   model.fit(X_train, y_train)
   prediction = model.predict("thickness", "size", "shape", "adhesion", "single", "nuclei", "chromatin", "nucleoli", "mitosis")
   if prediction  == 0:
-    return "No Breast Cancer present in prediction"
+    output = "No Breast Cancer present in prediction"
   if prediction == 1:
-    return "Breast Cancer present in prediction"
+    output =  "Breast Cancer present in prediction"
+return output
 
 with gr.Blocks() as demo:
 
