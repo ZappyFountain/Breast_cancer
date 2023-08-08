@@ -19,3 +19,6 @@ def breast_cancer_prediction(thickness, size, shape, adhesion, single, nuclei, c
     return "No Breast Cancer present in prediction"
   if prediction == 1:
     return "Breast Cancer present in prediction"
+
+thickness1= gr.number(label = "Thickness")
+
