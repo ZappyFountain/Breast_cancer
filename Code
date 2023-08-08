@@ -20,5 +20,15 @@ def breast_cancer_prediction(thickness, size, shape, adhesion, single, nuclei, c
   if prediction == 1:
     return "Breast Cancer present in prediction"
 
+interface = gr.interface{
+fn = predict
 thickness1= gr.number(label = "Thickness")
-
+size1 = gr.number(label = "Size")
+shape1= gr.number(label = "Shape")
+adhesion1= gr.number(label = "Adhesion")
+single1= gr.number(label = "Single")
+nuclei1= gr.number(label = "Nuclei")
+chromatin1= gr.number(label = "Chromatin")
+nucleoli1= gr.number(label = "Nucleoli")
+mitosis1= gr.number(label = "Mitosis")
+output = predict}
