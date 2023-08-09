@@ -5,10 +5,11 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 import numpy as np
 
+bc = pd.read_csv("wisconsin_breast_cancer.csv")
+bc=bc.dropna(how='any')
+bc.to_csv("cancer_edited.csv")
+
 def breast_cancer_prediction(thickness, size, shape, adhesion, single, nuclei, chromatin, nucleoli, mitosis):
-  bc = pd.read_csv("wisconsin_breast_cancer.csv")
-  bc=bc.dropna(how='any')
-  bc.to_csv("cancer_edited.csv")
   X = bc[["thickness", "size", "shape", "adhesion", "single", "nuclei", "chromatin", "nucleoli", "mitosis"]]
   y = bc["class"]
   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state = 1)
